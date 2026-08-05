@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Azamat — Links</title>
+<meta name="description" content="Azamat's personal links." />
+
+<!-- Tailwind (CDN, utility classes only) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0D0D0D',
+          card: '#1A1A1A',
+          accent: '#4F8CFF',
+          secondary: '#9BA1AC',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-bg text-white font-body min-h-screen overflow-x-hidden relative">
+
+  <!-- Ambient background layers -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <canvas id="particles"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <main class="relative z-10 flex flex-col items-center px-6 pt-16 pb-24 max-w-md mx-auto sm:max-w-lg">
+
+    <!-- Profile -->
+    <section class="w-full flex flex-col items-center text-center reveal" style="--delay:0ms">
+      <div class="avatar-ring">
+        <img
+          src="https://api.dicebear.com/7.x/initials/svg?seed=Azamat&backgroundColor=1a1a1a&textColor=4f8cff"
+          alt="Azamat's profile picture"
+          class="avatar-img"
+          id="avatar"
+        />
+      </div>
+      <h1 class="mt-6 font-display text-2xl sm:text-3xl font-semibold tracking-tight">
+        Azamat
+      </h1>
+      <p class="mt-2 text-secondary text-sm sm:text-base leading-relaxed max-w-xs">
+        Building on the web, one project at a time. Based in Tashkent 🇺🇿
+      </p>
+    </section>
+
+    <!-- Links -->
+    <section class="w-full mt-10 flex flex-col gap-4">
+
+      <a href="https://www.instagram.com/eisnix?igsh=MWNjZm5pNmNraGZhOA==" target="_blank" rel="noopener noreferrer"
+         class="link-card reveal" style="--delay:80ms" data-platform="Instagram">
+        <span class="icon-wrap">
+          <svg viewBox="0 0 24 24" class="icon" fill="none"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="link-title">Instagram</span>
+          <span class="link-sub">@eisnix</span>
+        </span>
+        <span class="chevron">→</span>
+      </a>
+
+      <a href="https://x.com/iesnix" target="_blank" rel="noopener noreferrer"
+         class="link-card reveal" style="--delay:150ms" data-platform="X">
+        <span class="icon-wrap">
+          <svg viewBox="0 0 24 24" class="icon" fill="none"><path d="M17.5 3h3.2l-7 8 7.6 10h-5.9l-4.6-6.3L5.1 21H1.9l7.5-8.6L2.2 3h6l4.2 5.7L17.5 3Z" fill="currentColor"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="link-title">X</span>
+          <span class="link-sub">@iesnix</span>
+        </span>
+        <span class="chevron">→</span>
+      </a>
+
+      <a href="https://t.me/eisnix" target="_blank" rel="noopener noreferrer"
+         class="link-card reveal" style="--delay:220ms" data-platform="Telegram">
+        <span class="icon-wrap">
+          <svg viewBox="0 0 24 24" class="icon" fill="none"><path d="M21 4 3 11.5l5.5 2M21 4 15.8 20l-4.8-6.5M21 4 8.5 13.5v5.7L11 17" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="link-title">Telegram</span>
+          <span class="link-sub">@eisnix</span>
+        </span>
+        <span class="chevron">→</span>
+      </a>
+
+    </section>
+
+    <footer class="mt-14 text-xs text-secondary/60 tracking-wide reveal" style="--delay:290ms">
+      © <span id="year"></span> Azamat
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
