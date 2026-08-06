@@ -54,8 +54,7 @@ function render(){
 
 render();
 
-// ---- Double-tap zoom oldini olish (ba'zi brauzerlar viewport meta'ga
-// e'tibor bermasligi mumkin, shuning uchun qo'shimcha himoya) ----
+// ---- Double-tap zoom oldini olish ----
 let lastTouchEnd = 0;
 document.addEventListener('touchend', function (e) {
   const now = Date.now();
